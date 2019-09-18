@@ -1,53 +1,52 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="index.css">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
 
-</head> 
-
-    <body>
-        <h2>Welcome to Chuck Norris's joke generator!</h2>
+<body>
+    <h2>Welcome to Chuck Norris's joke generator!</h2>
 
     <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Category menu</button>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="./cate1.html">Category 1</a>
-                <a href="#">Category 2</a>
-                <a href="#">Category 3</a>
-                <a href="#">Category 4</a>
-                <a href="#">Category 5</a>
-                <a href="#">Category 6</a>
-            </div>
+        <button onclick="myFunction()" class="dropbtn">Category menu</button>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="./cate1.html">Category 1</a>
+            <a href="#">Category 2</a>
+            <a href="#">Category 3</a>
+            <a href="#">Category 4</a>
+            <a href="#">Category 5</a>
+            <a href="#">Category 6</a>
         </div>
-    
- 
+    </div>
+
     <div class="button">
-            <a href="./jokes.html" class="dropbtn">Random joke here!</a>
-        </div>
-    
+        <a href="./jokes.html" class="dropbtn">Random joke here!</a>
+    </div>
+
     <script>
         function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-    }
-
-    window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
+            document.getElementById("myDropdown").classList.toggle("show");
         }
-        }
-    }
-    }
 
-</script>
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
 
 </body>
+
 </html>

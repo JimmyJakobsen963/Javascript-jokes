@@ -1,38 +1,42 @@
 <!doctype html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
-  <link rel="stylesheet" type="text/css" href="index.css">
 
-  <style>
-          body {
-      text-align: center;
-      margin: 10px;
-      padding: 10px;
-    }
-  </style>
+<head>
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+    <style>
+        body {
+            text-align: center;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
 </head>
 
 <body>
     <h2 text-align center> Animal jokes </h2>
-        <button onclick="hentData()"> Get random jokes </button><div id="vits"></div>
-        <script>
-                let vitsDiv = document.getElementById('vits');
-                async function hentData() {
-                    let resultat = await axios.get('https://api.chucknorris.io/jokes/random?category=animal');
-                    let vits = resultat.data;
-                    console.log(vits);
-                    vitsDiv.innerHTML = vits.value;
-      }
+    <button onclick="hentData()"> Get random jokes </button>
+    <div id="vits"></div>
+    <script>
+        let vitsDiv = document.getElementById('vits');
+        async function hentData() {
+            let resultat = await axios.get('https://api.chucknorris.io/jokes/random?category=animal');
+            let vits = resultat.data;
+            console.log(vits);
+            vitsDiv.innerHTML = vits.value;
+        }
     </script>
     </br>
-      <button onclick="hentMultipleData()"> Get multiple random jokes </button><div id="vits"></div>
+    <button onclick="hentMultipleData()"> Get multiple random jokes </button>
+    <div id="vits"></div>
 
-      <script>
-      
-      </script>
+    <script>
+
+    </script>
 </body>
+
 </html>
