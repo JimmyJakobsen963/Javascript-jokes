@@ -5,11 +5,33 @@
 <head>
     <meta charset="utf-8">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="./styles/index.css">
+    <link rel="stylesheet" type="text/css" href="../styles/index.css">
 </head>
 
 <body>
-    <h2 text-align center> Animal jokes </h2>
+    <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Category menu</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="../html/animal.html">Animal</a>
+                <a href="../html/career.html">Career</a>
+                <a href="../html/celebrity.html">Celebrity</a>
+                <a href="../html/dev.html">Dev</a>
+                <a href="../html/Explicit.html">Explicit</a>
+                <a href="../html/fashion.html">Fashion</a>
+            </div>
+        </div>
+        <script src="../scripts/dropDown.js"></script>
+
+    <button onclick="goBack()" class="dropbtn">Go Back</button>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+    <h1 align="center"> Animal jokes </h1>
+
+    <div align="center">
     <button onclick="hentData()"> Get random jokes </button>
     <div id="vits"></div>
     <script>
@@ -36,13 +58,9 @@
         }
         
     </script>
-    </br>
-    <button onclick="goBack()">Go Back</button>
-    <script>
-        function goBack() {
-            window.history.back();
-        }
-    </script>
+        </br>
+        <img src="../images/chucklogo.jpg" width="20%" height="20%">
+    </div>
 </body>
 
 </html>
