@@ -6,23 +6,16 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/styles.css?v=1.0">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <style>
-        body {
-            text-align: center;
-            margin: 10px;
-            padding: 10px;
-        }
-    </style>
 </head>
 
 <body>
-    <h2 text-align center> Career jokes </h2>
+    <h2 text-align center> Dev jokes </h2>
     <button onclick="hentData()"> Get random joke </button>
     <div id="vits"></div>
     <script>
         let vitsDiv = document.getElementById('vits');
         async function hentData() {
-            let resultat = await axios.get('https://api.chucknorris.io/jokes/random?category=career');
+            let resultat = await axios.get('https://api.chucknorris.io/jokes/random?category=dev');
             let vits = resultat.data;
             console.log(vits);
             vitsDiv.innerHTML = vits.value;

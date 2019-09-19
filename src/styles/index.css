@@ -23,12 +23,12 @@
 
     .dropdown-content {
     display: none;
-    visibility: hidden;
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    visibility: hidden;
     }
 
     .dropdown-content a {
@@ -36,12 +36,14 @@
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    visibility: visible;
     }
 
     .dropdown-content a:hover {background-color: #ddd}
 
-    .show {display:block;}
+    .show {
+        display:block;
+        visibility: visible;
+    }
 
     .button {
         border: none;
@@ -82,4 +84,8 @@
       
       #myUL li a:hover:not(.header) {
         background-color: #eee;
+      }
+
+      img {
+        position: relative;
       }
