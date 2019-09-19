@@ -15,12 +15,12 @@
     <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">Category menu</button>
         <div id="myDropdown" class="dropdown-content">
-            <a href="./cate1.html">Category 1</a>
-            <a href="#">Category 2</a>
-            <a href="#">Category 3</a>
-            <a href="#">Category 4</a>
-            <a href="#">Category 5</a>
-            <a href="#">Category 6</a>
+            <a href="./animal.html">Animal</a>
+            <a href="./career.html">Career</a>
+            <a href="./celebrity.html">Celebrity</a>
+            <a href="./dev.html">Dev</a>
+            <a href="./Explicit.html">Explicit</a>
+            <a href="./fashion.html">Fashion</a>
         </div>
     </div>
 
@@ -42,6 +42,37 @@
                     if (openDropdown.classList.contains('show')) {
                         openDropdown.classList.remove('show');
                     }
+                }
+            }
+        }
+    </script>
+    
+    </br>
+    <h3>Search Function</h3>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search.." title="Type in a name">
+    <ul id="myUL">
+        <li><a href="./animal.html">Animal</a></li>
+        <li><a href="./career.html">Career</a></li>
+        <li><a href="./celebrity.html">Celebrity</a></li>
+        <li><a href="./dev.html">Dev</a></li>
+        <li><a href="./Explicit.html">Explicit</a></li>
+        <li><a href="./fashion.html">Fashion</a></li>
+    </ul>
+
+    <script>
+        function myFunction() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
                 }
             }
         }
